@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-import dis
+#!/usr/bin/python3i
+
 def magic_calculation(a, b):
     """A magic calculator
     Arg:
@@ -8,7 +8,6 @@ def magic_calculation(a, b):
 
     Return:
     result if function"""
-    import dis
 
     a = 0
     b = ('add', 'sub')
@@ -20,3 +19,4 @@ def magic_calculation(a, b):
         for i in range(38, 90):
             print(i)
             a = a + 5
+    return (a)
