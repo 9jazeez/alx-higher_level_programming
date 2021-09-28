@@ -4,11 +4,15 @@
 def safe_print_list(my_list=[], x=0):
     try:
 
-        for i in range(0, x + 1):
+        a = 0
+        if x == 0:
+            return (a)
+        for i in range(0, x):
             print(my_list[i], end='')
+            a +=1
         print()
-        return (i)
+        return (a)
 
     except:
         print()
-        return (i)
+        return (a)
