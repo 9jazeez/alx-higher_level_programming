@@ -6,4 +6,3 @@ def raise_exception_msg(message=""):
         raise Exception
     except Exception:
         print(message)
-        
