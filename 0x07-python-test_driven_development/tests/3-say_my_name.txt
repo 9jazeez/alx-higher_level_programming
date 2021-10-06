@@ -1,0 +1,26 @@
+===================================
+say_my_name function test file
+==================================
+::
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+	>>> say_my_name("Bob")
+	My name is Bob 
+	>>> say_my_name("Tope", "Ade")
+	My name is Tope Ade
+	
+===================
+Edges cases
+=============
+::
+	>>> say_my_name(5)
+	first_name must be a string
+	>>> say_my_name("Tope", 4)
+	last_name must be a string
+	
+=================
+End test cases
+===========================

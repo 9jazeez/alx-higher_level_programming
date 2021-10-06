@@ -1,0 +1,38 @@
+================================
+0-add_integer function test
+=================================
+
+This function adds two integers or floats
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98.3
+>>> add_integer(5.2, 4.8)
+10.0
+
+========================
+Edges test
+============
+
+>>> add_integer('a', 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(2, 'b')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(2, 2.4)
+4.4
+>>> add_integer(0)
+98
+>>> add_integer(2)
+100
+>>> add_integer(11111111111111111111, 11111111111111111111)
+22222222222222222222
+>>> add_integer(0, 0)
+0
