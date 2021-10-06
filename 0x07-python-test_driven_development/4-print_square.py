@@ -22,7 +22,7 @@ def print_square(size):
         elif size < 0 or isinstance(size, float):
             raise ValueError('size must be >= 0')
         elif size == 0:
-            print()
+            pass
         else:
             for i in range(size):
                 print("{}".format("#" * size))

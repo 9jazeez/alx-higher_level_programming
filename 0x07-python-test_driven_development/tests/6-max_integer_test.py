@@ -20,6 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([1, 3, 4, 2]), 4)
         self.assertAlmostEqual(max_integer([-2, 4, -4, -9]), 4)
         self.assertAlmostEqual(max_integer([4, 5, 3]), 5)
+        self.assertAlmostEqual(max_integer([3]), 3)
 
     def test_input_type(self):
         self.assertRaises(TypeError, max_integer, True)

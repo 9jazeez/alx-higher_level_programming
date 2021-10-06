@@ -23,5 +23,5 @@ def add_integer(a, b=98):
     elif isinstance(b, str) or isinstance(b, tuple):
         raise TypeError('b must be an integer')
     else:
-        c = a + b
+        c = int(a + b)
     return (c)

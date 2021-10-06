@@ -41,3 +41,15 @@ Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
+
+=========================================
+Edges cases
+=======================
+
+
+>>> text_indentation("This.is:My school?")
+This.
+is:
+My school?
+>>> text_indentation(5)
+text must be a string
