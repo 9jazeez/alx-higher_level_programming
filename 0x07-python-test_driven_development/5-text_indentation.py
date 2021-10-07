@@ -17,12 +17,13 @@ def text_indentation(text):
     try:
         if not isinstance(text, str):
             raise TypeError('text must be a string')
-        elif text == None:
+        elif text is None:
             pass
         else:
             for i in text:
                 print(i, end="")
                 if i in (".", "?", ":"):
+                    print()
                     print()
     except Exception as err:
         print(err)

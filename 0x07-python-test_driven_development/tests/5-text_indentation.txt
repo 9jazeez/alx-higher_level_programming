@@ -47,9 +47,12 @@ Edges cases
 =======================
 
 
->>> text_indentation("This.is:My school?")
+>>> text_indentation("This.is:My school?") #doctest: +NORMALIZE_WHITESPACE
 This.
+<BLANKLINE>
 is:
+<BLANKLINE>
 My school?
+<BLANKLINE>
 >>> text_indentation(5)
 text must be a string
