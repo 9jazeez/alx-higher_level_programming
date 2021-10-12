@@ -1,0 +1,30 @@
+============================================
+test cases on Mylist
+===============================
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> myl = MyList()
+	>>> myl.append(1)
+	>>> myl.append(2)
+	>>> myl.append(3)
+	>>> myl + [4, 5, 6]
+	[1, 2, 3, 4, 5, 6]
+	>>> myl
+	[1, 2, 3]
+	>>> myl2 = MyList()
+	>>> myl2.append(8)
+	>>> myl2 + [1, 4, 2]
+	[8, 1, 4, 2]
+	>>> myl2
+	[8]
+	>>> myl2.append(1)
+	>>> myl2.append(4)
+	>>> myl2.append(2)
+	>>> myl2.print_sorted()
+	[1, 2, 4, 8]
+	>>> myl2
+	[8, 1, 4, 2]
+
+================
+Edge test cases
+===================
