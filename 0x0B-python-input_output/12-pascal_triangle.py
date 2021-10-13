@@ -30,6 +30,6 @@ def pascal_triangle(n):
         aux.append(1)
         auxc = aux[:]
         aux = []
-        lists.append(aux)
+        lists.append(auxc)
 
     return (lists)
