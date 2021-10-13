@@ -15,6 +15,6 @@ def read_file(filename=" "):
     Return : Output on stdout
     """
 
-    with open(filename) as f:
-        for i in f:
-            print(i)
+    with open(filename, 'r') as f:
+        read_data = f.read()
+    print(read_data, end="")
