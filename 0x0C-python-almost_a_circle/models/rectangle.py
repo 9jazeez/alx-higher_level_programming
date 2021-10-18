@@ -84,4 +84,21 @@ class Rectangle(Base):
         """Returns area"""
         ar = self.__width * self.height
         return (ar)
+    
+    def display(self):
+        """Display method"""
+        for i in range(self.__x):
+            print()
+        for i in range(self.height):
+            print("{} {}".format(" " * self.__y, "#" * self.width))
+
+    def __str__(self):
+        """Overriding the __str__"""
+        id_str = " (" + str(self.id) + ")"
+        a = " " +  str(self.__x) + "/"
+        b = str(self.__y) + " "
+        c = str(self.__width) + "/"
+        d = str(self.__height)
+
+        return ("[Retangle]"  + id_str + a + b + c + d)
 
