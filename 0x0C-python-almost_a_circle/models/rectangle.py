@@ -30,43 +30,43 @@ class Rectangle(Base):
         elif width <= 0:
             raise ValueError("width must be > 0")
         self.__width = width
-    
+
     @property
     def height(self):
         """A getter """
         return (self.__height)
-    
+
     @height.setter
     def height(self, height):
-        """A setter """ 
+        """A setter """
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height <= 0:
             raise ValueError("height must be > 0")
         self.__height = height
-    
+
     @property
     def y(self):
         """A getter """
         return (self.__y)
-    
+
     @y.setter
     def y(self, y):
-        """A setter """ 
+        """A setter """
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
         elif y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
-    
+
     @property
     def x(self):
         """A getter """
         return (self.__x)
-    
+
     @x.setter
     def x(self, x):
-        """A setter """ 
+        """A setter """
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
         elif x < 0:
@@ -84,7 +84,7 @@ class Rectangle(Base):
         """Returns area"""
         ar = self.__width * self.height
         return (ar)
-    
+
     def display(self):
         """Display method"""
         for i in range(self.__x):
@@ -95,10 +95,35 @@ class Rectangle(Base):
     def __str__(self):
         """Overriding the __str__"""
         id_str = " (" + str(self.id) + ")"
-        a = " " +  str(self.__x) + "/"
+        a = " " + str(self.__x) + "/"
         b = str(self.__y) + " "
         c = str(self.__width) + "/"
         d = str(self.__height)
 
-        return ("[Retangle]"  + id_str + a + b + c + d)
+        return ("[Retangle]" + id_str + a + b + c + d)
 
+    def upd(self, *args):
+        """Method to update all attr"""
+        self.id = args[0]
+        self.__width = args[1]
+        self.__height = args[2]
+        self.__x = args[3]
+        self.__y = args[4]
+
+    def update(self, *args, **kwargs):
+        """Method to update all attr"""
+        if args:
+            myattr = ["id", "width", "height", "x", "y"]
+            for i, e in enumerate(args):
+                setattr(self, myattr[i], e)
+            return
+        for x, y in kwargs.items():
+            if hasattr(self, x):
+                setattr(self, x, y)
+
+    def to_dictionary(self):
+        """Dictionary"""
+        Dict = {}
+        for x, y in vars(self).items():
+            Dict[x.split("__")[-1]] = y
+        return (Dict)
