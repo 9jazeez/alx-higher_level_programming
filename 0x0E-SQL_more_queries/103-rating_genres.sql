@@ -1,7 +1,7 @@
 -- List genres by rating in dataase
 SELECT a.name, SUM(c.rate) AS rating
 FROM tv_genres AS a
-JOIN tv_show_genre AS b
+JOIN tv_show_genres AS b
 ON a.id = b.genre_id
 JOIN tv_show_ratings AS c
 ON b.show_id = c.show_id
