@@ -2,13 +2,8 @@
 
 let myVar = process.argv[2];
 myVar = parseInt(myVar);
-if (isNaN(myVar))
-{
-	console.log('Not A Number');
+if (isNaN(myVar)) {
+  console.log('Not A Number');
+} else {
+  console.log(myVar);
 }
-else
-{
-
-	console.log(myVar);
-}
-
