@@ -4,4 +4,4 @@ const m1 = 'C is fun';
 const m2 = 'Python is cool';
 const m3 = 'JavaSpcrit is amazing';
 
-console.log(m1+"\n"+m2+"\n"+m3);
+console.log(m1 + '\n' + m2 + '\n' + m3);
