@@ -1,6 +1,3 @@
 #!/bin/bash
-#Using curl to get content length of an 
-#HTTP respond request
-
-url=$1
-curl -Is $url | grep -i Content-Length | awk '{print $2}'
+#Using curl to get content length of an HTTP response 
+curl -Is $1 | grep -i Content-Length | awk '{print $2}'
