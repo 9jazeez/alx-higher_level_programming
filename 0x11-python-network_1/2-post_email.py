@@ -13,4 +13,4 @@ if __name__ == "__main__":
 
 		content = request_http.read()
 
-	print("Your email is: {}".format(content.decode('utf-8')))
+	print(content.decode('utf-8'))
