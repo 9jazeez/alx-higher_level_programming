@@ -1,14 +1,13 @@
-//Using ajax to send a get request
+// Using ajax to send a get request
 
-let div = $('#character');
+const div = $('#character');
 
-$(function() {
-  
+$(function () {
   $.ajax({
     type: 'GET',
     url: 'https://swapi-api.hbtn.io/api/people/5/?format=json',
     success: function (data) {
-       div.text('name: '+data.name);
-      }
+      div.text('name: ' + data.name);
+    }
   });
- });
+});

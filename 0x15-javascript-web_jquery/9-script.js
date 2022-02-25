@@ -1,14 +1,13 @@
-//Using ajax to send a get request
+// Using ajax to send a get request
 
-$(function() {
+$(function () {
+  const $div = $('#hello');
 
-let $div = $('#hello');
-  
   $.ajax({
     type: 'GET',
     url: 'https://fourtonfish.com/hellosalut/?lang=fr',
     success: function (data) {
-       $div.text(data.hello);
-      }
+      $div.text(data.hello);
+    }
   });
- });
+});

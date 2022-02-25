@@ -1,16 +1,15 @@
-//Using ajax to send a get request
+// Using ajax to send a get request
 
-let ul = $('#list_movies');
+const ul = $('#list_movies');
 
-$(function() {
-  
+$(function () {
   $.ajax({
     type: 'GET',
     url: 'https://swapi-api.hbtn.io/api/films/?format=json',
     success: function (data) {
-       $.each(data['results'], function(i, item) {
-         ul.append('<li>'+item.title+'</li>');
-         });
-      }
+      $.each(data.results, function (i, item) {
+        ul.append('<li>' + item.title + '</li>');
+      });
+    }
   });
- });
+});

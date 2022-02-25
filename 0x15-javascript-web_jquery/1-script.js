@@ -1,3 +1,3 @@
-//using jquery to style html header tag
+// using jquery to style html header tag
 const header = $('header');
-header.css('color','red');
+header.css('color', 'red');
